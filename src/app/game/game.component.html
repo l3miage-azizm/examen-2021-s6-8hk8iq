@@ -1,0 +1,19 @@
+<pre>
+Au tour du joueur {{game.turn === "RED" ? "1" : "2"}}
+</pre>
+
+<table>
+  <tbody>
+    <tr *ngFor = "let line of game.board; trackBy: trackByIndex">
+      <td *ngFor = "let col of line; index as j; trackBy: trackByIndex"
+          [class] = "col"
+          [class.hilight] = "hoverColumn === j"
+          (pointerenter)  = "hoverColumn  =  canPlay(j) ? j : -1"
+          (pointerleave)  = "hoverColumn  = -1"
+          (click) = "play.emit(j)"
+      >
+        <div></div>
+      </td>
+    </tr>
+  </tbody>
+</table>

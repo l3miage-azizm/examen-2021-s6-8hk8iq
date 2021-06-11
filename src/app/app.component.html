@@ -1,0 +1,7 @@
+<button (click)="newGame()">Nouvelle partie</button>
+
+<app-game
+  *ngFor = "let g of games | async"
+  [game] = "g"
+  (play) = "play(g, $event)"
+></app-game>

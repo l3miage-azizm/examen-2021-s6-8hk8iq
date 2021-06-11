@@ -1,0 +1,39 @@
+$W: 32px;
+
+:host {
+
+  table {
+    border: solid black 3px;
+    background: grey;
+    border-collapse: collapse;
+
+    td {
+      border: solid grey 1px;
+      padding: 2px;
+
+      div {
+        width:  $W;
+        height: $W;
+        border: solid black 1px;
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+
+    td.hilight {
+      background-color: aqua;
+      border: solid aqua 1px;
+    }
+
+    td.YELLOW > div {
+      background-color: yellow;
+      box-shadow:         inset 0 0 10px #000000;
+    }
+
+    td.RED > div {
+      background-color: red;
+      box-shadow:         inset 0 0 10px #000000;
+    }
+
+  }
+}
